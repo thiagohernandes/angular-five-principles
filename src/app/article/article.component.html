@@ -1,0 +1,31 @@
+<div class="container">
+  <div *ngFor="let article of _articles">
+      <div>
+          <div>
+              <div>
+              <h3><strong>{{ article.votes }} Points</strong></h3>
+              </div>
+          </div>
+      </div>
+
+      <div style="background-color:black">
+          <a href="{{ article.link }}">
+          {{ article.title }} - {{ domain(article) }}
+          </a>
+        <ul >
+          <li>
+            <a href (click)="voteUp(article)">
+            <i class="arrow up icon"></i>
+            upvote
+            </a>
+          </li>
+          <li>
+            <a href (click)="voteDown(article)">
+            <i></i>
+            downvote
+            </a>
+          </li>
+        </ul>
+      </div>
+  </div>
+</div>

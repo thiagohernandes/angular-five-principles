@@ -1,0 +1,15 @@
+<div class="jumbotron">
+  
+  <h3>{{_idade}}</h3>
+
+  <h1 class="display-4">Olá Angular 5 ;)</h1>
+
+  <div *ngFor="let joke of _jokes">
+    <h4>{{joke.id}}</h4>
+    <p>{{joke.name}}</p>
+  </div>
+
+  <button type="button" class="btn btn-secondary" (click)="_dontShow = !_dontShow">Mostrar/Esconder</button>
+  <span [hidden]="_dontShow"><h3>Mostrou o elemento</h3></span>
+  
+</div>
